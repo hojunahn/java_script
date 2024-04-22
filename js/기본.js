@@ -36,3 +36,33 @@ let age = 19;
 let isAdult = (age > 18) ? true : false;
 if(isAdult) console.log("성인 입니다.");
 else console.log("미성년자 입니다.");
+
+// underfined :
+let empty; // 자바스크립트는 값이 대입될때 형이 결정나고 값이 대입되지 않으면 underfined
+console.log(empty);
+
+// 객체 : 자바스크립트는 기본 자료형을 제외하고 모든 자료형이 객체 임
+// 배열
+let score = [80, 99, 100, 65];
+console.log(score[2]);
+let array2 = ["아이브", "안유진", 20, true, [100,99,88]];
+console.log(array2[1][1]);
+console.log(array2[4][2]);
+
+// 객체 리터럴 (자바의 map과 약간 유사)
+let score2 = {
+    kor:80,
+    eng:90,
+    mat:56,
+    scn:99,
+};
+console.log(score2.mat);
+
+// typeof : 데이터 형을 확인하기 위해 사용
+let name = "도우너";
+console.log(typeof(name));
+
+// toString() : 문자열로 반환하는 메소드
+let fruits = ["버내너","올뢘쥐","아뽈","매잉고"];
+console.log(fruits.toString());
+
