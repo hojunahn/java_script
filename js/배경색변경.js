@@ -10,10 +10,10 @@
 // });
 
 // jQurey
-    var colors = ["red", "orange", "yellow", "green", "blue", "purple"];
-    var colorIndex = 0;
+    // var colors = ["red", "orange", "yellow", "green", "blue", "purple"];
+    // var colorIndex = 0;
   
-    $("#colorButton").click(function() {
-      $("body").css("background-color", colors[colorIndex]);
-      colorIndex = (colorIndex + 1) % colors.length;
-    });
+    // $("#colorButton").click(function() {
+    //   $("body").css("background-color", colors[colorIndex]);
+    //   colorIndex = (colorIndex + 1) % colors.length;
+    // });

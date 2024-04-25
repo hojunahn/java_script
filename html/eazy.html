@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        #container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img {
+            position: absolute;
+            width: 600px;
+            height: 500px;
+            left: 50%;
+            transform: translate(-50%);
+            background-color: red;
+        }
+        .img > img {
+            width: 100%;
+            height: 100%;
+        }
+        .img > a {
+            width: 150px;
+            position: absolute;
+            left: 3%;
+            bottom: 3%;
+            border: 1px solid #fff;
+            background-color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 5px;
+        }
+        .txt_box {
+            position: absolute;
+            bottom: 10%;
+            height: 100px;
+            display: none;
+        }
+        .txt_box > a {
+            width: 150px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border: 1px solid #000;
+            color: #000;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="img">
+            <img src="../img/eazy.jpeg" alt="">
+            <a class="onView" href="#" onclick="clickEvent('a')">상세 설명 보기</a>
+        </div>
+        <div class="txt_box">
+            <h3>그룹 잇지</h3>
+            <p>mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>
+            <a href="" class="offView" onclick="clickEvent('b')">상세 설명 닫기</a>
+        </div>
+    </div>
+    <script>
+        let okBtn = document.querySelector(".onView");
+        let txt = document.querySelector(".txt_box");
+        function clickEvent(click){
+            if(click == 'a') {
+                console.log("확인");
+                okBtn.style.display = 'none';
+                txt.style.display = 'block';
+            }else if (click == 'b') {
+                console.log("no확인");
+                okBtn.style.display = 'block';
+                txt.style.display = 'none';
+            }
+        }
+    </script>    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: auto;
+        }
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 50px;
+            color: #fff;
+            margin: 0 5px;
+            border: none;
+
+        }
+        #Btn1 {
+            background-color: green;
+        }
+        #Btn2 {
+            background-color: orange;
+        }
+        #Btn3 {
+            background-color: purple;
+        }
+        .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: auto;
+        }
+        .main {
+            margin-top: 30px;
+            width: 600px;
+            height: 300px;
+            background-color: #666;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+            <button id="Btn1" onclick="clickEvent('green')">Green</button>
+            <button id="Btn2" onclick="clickEvent('orange')">orange</button>
+            <button id="Btn3" onclick="clickEvent('Purple')">Purple</button>
+    </div>
+    <div class="wrap">
+        <div class="main"></div>
+    </div>
+    <script>
+        let main = document.querySelector(".main");
+        function clickEvent(BtnColor) {
+            console.log("확인");
+            main.style.background = BtnColor;
+        }
+    </script>
+</body>
+</html>
